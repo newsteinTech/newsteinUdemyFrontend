@@ -1,0 +1,33 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Newstein Udemy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" routerLink='/new-work'>Create New Work</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li> -->
+    </ul>
+    
+    <span class="navbar-text nav-item" *ngIf="navService.isLoggedIn">
+        <a class="nav-link" routerLink='/login'>Login</a>
+      </span>
+      <span class="navbar-text nav-item" *ngIf="navService.isLoggedIn">
+        <a class="nav-link" routerLink='/signup'>Signup</a>
+      </span>
+      <span class="navbar-text nav-item" *ngIf="!navService.isLoggedIn">
+        <a class="nav-link">Hi {{navService.name}}</a>
+      </span>
+      
+      <span class="navbar-text nav-item" *ngIf="!navService.isLoggedIn" (click)="signout()">
+        <a class="nav-link">Signout</a>
+      </span>
+      </div>
+</nav>

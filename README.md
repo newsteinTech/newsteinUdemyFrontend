@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+Setup: 
+
+1) ng new UdemyFrontend
+2) Copy Shared and User Components, Services, Models
+3) Ngx-Loading: 
+    npm i ngx-loading --save
+    In AppModule:
+    import { NgxLoadingModule } from 'ngx-loading';
+    NgxLoadingModule.forRoot({}),
+
+4) ngModel:
+    import { FormsModule } from '@angular/forms';
+    FormsModule
+5) httpClient:
+    import { HttpClientModule } from '@angular/common/http';
+    HttpClientModule
+    
+
