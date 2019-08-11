@@ -44,5 +44,18 @@ Setup:
 5) httpClient:
     import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
+6) Toast:
+    npm i toastr --save
+    npm i jquery --save
+    Angular.json:
+        "styles": [
+              "src/styles.css",
+              "node_modules/toastr/build/toastr.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js"
+            ]
+
     
 

@@ -1,0 +1,54 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">
+</ngx-loading>
+
+<form>
+  <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+    <button type="button" class="close float-right" aria-label="Close" (click)="callParent(index)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="row">
+      <div class="col-sm-1">{{index + 1}}).</div>
+
+      <div class="col-sm-11">
+
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="model.title" [(ngModel)]="model.title"
+              placeholder="Course Title">
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Video</label>
+            <div class="col-sm-10" >
+                <video src="{{model.video}}" controls *ngIf="model.video">
+                  </video>
+              &nbsp;
+              <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+              <button (click)="fileInput.click()" class="btn btn-warning">Upload File</button>
+            </div>
+          </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <app-content-detail 
+            *ngFor="let subContent of model.subContents; let idx = index" 
+            [model]="subContent" 
+            [index]="idx"
+            [showAddContent]="false"
+            (contentRemoveEvent)="removeContent(idx)"></app-content-detail>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn-success" (click)="addNewSubContent()" *ngIf="showAddContent">Add new SubContent</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</form>

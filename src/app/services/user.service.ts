@@ -4,7 +4,7 @@ import { LoginModel } from '../models/user/login-model';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { SignupModel } from '../models/user/signup-model';
-import { UserProfile } from '../models/user/user-profile';
+import { LoginResponse } from '../models/user/loginResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +32,7 @@ export class UserService {
   }
 
   // Store user details and jwt token in local storage to keep user logged in between page refreshes
-  public static saveUserData(model: UserProfile): void {
+  public static saveUserData(model: LoginResponse): void {
     if (!model) {
       return;
     }
@@ -40,11 +40,11 @@ export class UserService {
     localStorage.setItem(UserService.userKey, JSON.stringify(model));
   }
 
-  public static getUserData(): UserProfile {
+  public static getUserData(): LoginResponse {
     let strData = localStorage.getItem(UserService.userKey);
 
     if (strData) {
-      let user: UserProfile = JSON.parse(strData);
+      let user: LoginResponse = JSON.parse(strData);
       return user;
     }
 
@@ -52,7 +52,7 @@ export class UserService {
   }
 
   public static getToken(): string {
-    let userProfile: UserProfile = UserService.getUserData();
+    let userProfile: LoginResponse = UserService.getUserData();
     if (userProfile) {
       return userProfile.token;
     }

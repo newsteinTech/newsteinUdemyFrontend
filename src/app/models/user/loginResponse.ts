@@ -1,6 +1,6 @@
 import { UserModel } from './user-model';
 
-export class UserProfile {
+export class LoginResponse {
     public token: string;
     public user: UserModel;
 }

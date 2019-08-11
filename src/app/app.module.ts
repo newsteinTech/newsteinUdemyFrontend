@@ -11,6 +11,9 @@ import { LoginComponent } from './components/user/login/login.component';
 import { SignupComponent } from './components/user/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CourseDetailsComponent } from './components/courses/course-details/course-details.component';
+import { CourseUnitComponent } from './components/courses/course-unit/course-unit.component';
+import { CourseListComponent } from './components/courses/course-list/course-list.component';
+import { ContentDetailComponent } from './components/courses/contents/content-detail/content-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { CourseDetailsComponent } from './components/courses/course-details/cour
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    CourseUnitComponent,
+    CourseListComponent,
+    ContentDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 export class UserModel {
     public _id: string;
     public name: string;
-    public employeeNo: string;
+    public role: string;
 }

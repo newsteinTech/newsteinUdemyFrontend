@@ -1,0 +1,8 @@
+
+    <img src="{{model.image}}" class="card-img-top img-height" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{model.title}}</h5>
+      <p class="card-text">{{model.description}}.</p>
+    </div>
+      <button type="submit" class="btn btn-primary" [routerLink]="['/teacher/courses', model._id]">More Details</button>
+    
