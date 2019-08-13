@@ -9,6 +9,7 @@ import { CourseModel } from 'src/app/models/courses/course-model';
 export class CourseUnitComponent implements OnInit {
 
   @Input() public model: CourseModel;
+  @Input() public isExternal: boolean;
   constructor() { }
 
   ngOnInit() {

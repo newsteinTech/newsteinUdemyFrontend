@@ -12,9 +12,10 @@ export class FileUploadService {
 
   public uploadFile(file: File): Observable<ApiResponseModel<string>> {
     let uploadData = new FormData();
-    uploadData.append('myFile', file, file.name);
+    uploadData.append('file', file, file.name);
+    let url: string = "http://localhost:8000/upload"
     
-    return this.http.post<ApiResponseModel<string>>('my-backend.com/file-upload', uploadData /*, {reportProgress: true, observe: 'events' }*/);
+    return this.http.post<ApiResponseModel<string>>(url, uploadData /*, {reportProgress: true, observe: 'events' }*/);
   }
 
   public dummyFileUpload(file: File): Observable<ApiResponseModel<string>> {

@@ -14,6 +14,8 @@ import { CourseDetailsComponent } from './components/courses/course-details/cour
 import { CourseUnitComponent } from './components/courses/course-unit/course-unit.component';
 import { CourseListComponent } from './components/courses/course-list/course-list.component';
 import { ContentDetailComponent } from './components/courses/contents/content-detail/content-detail.component';
+import { HomeComponent } from './components/home/home.component';
+import { CourseDetailsExternalComponent } from './components/courses/course-details-external/course-details-external.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ContentDetailComponent } from './components/courses/contents/content-de
     CourseDetailsComponent,
     CourseUnitComponent,
     CourseListComponent,
-    ContentDetailComponent
+    ContentDetailComponent,
+    HomeComponent,
+    CourseDetailsExternalComponent
   ],
   imports: [
     BrowserModule,

@@ -59,3 +59,34 @@ Setup:
 
     
 
+
+
+MasterPiece: 
+    html attribute in with Angular.
+    Bootstrap to Angular
+        https://stackoverflow.com/questions/36051195/give-dynamic-id-angular2-binds
+
+        [id]="item.id"
+        [attr.id]="item.id"
+        id={{item.id}}
+
+            <ul>
+            <li *ngFor="#item of items" #elem [id]="item.id">
+                {{ item.name}} ID: {{elem.id}}
+            </li>
+            </ul>
+
+            <ul>
+            <li *ngFor="#item of items" #elem [attr.id]="item.id">
+                {{ item.name}} ID: {{elem.id}}
+            </li>
+            </ul>
+
+            <ul>
+            <li *ngFor="#item of items" #elem id={{item.id}}>
+                {{ item.name}} ID: {{elem.id}}
+            </li>
+            </ul>
+
+Conditional CSS Class
+    [ngClass]="{'show': idx==0}" 

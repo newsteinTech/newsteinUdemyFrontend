@@ -24,14 +24,6 @@ export class CourseDetailsComponent extends BaseComponent implements OnInit {
     private courseService: CourseService,
     private fileUploadService: FileUploadService) { 
       super(router, toastService);
-      this.model = new CourseModel();
-  }
-
-  public getToastService(): ToastService {
-    return this.toastService;
-  }
-  public getRouter(): Router {
-    return this.router;
   }
 
   ngOnInit() {
@@ -84,7 +76,7 @@ export class CourseDetailsComponent extends BaseComponent implements OnInit {
   private uploadFile(file: File, isVideo: boolean): void {
     this.loading = true;
 
-    this.fileUploadService.dummyFileUpload(file).subscribe(
+    this.fileUploadService.uploadFile(file).subscribe(
       response => {
         this.loading = false;
         if (response.isValid) {
