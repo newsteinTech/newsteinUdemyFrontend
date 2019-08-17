@@ -1,0 +1,15 @@
+{
+    "isValid": true,
+    "data": {
+        "token": "some toekn",
+        "user": {
+            "_id": "fwsdfkw234nj233",
+            "name": "Gaurav Singh",
+            "role": "teacher",
+            "mobile": "8297236375",
+            "email": "gaurav9939@gmail.com",
+            "profileStatus": false
+        }
+    },
+    "errors": null
+}

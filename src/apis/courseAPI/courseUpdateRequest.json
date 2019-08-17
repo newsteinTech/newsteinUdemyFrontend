@@ -1,0 +1,63 @@
+{
+    "isValid": true,
+    "data": {
+        "_id": "fwsdfkw234nj233",
+        "title": "Node JS Course",
+        "description": "React is one of the most popular frameworks for building client apps with HTML, CSS and JavaScript. Learn React to establish yourself as a front-end or a full-stack developer. AWS account setup and Web App deployemnt on AWS EC2 instance.",
+        "fee": 6000,
+        "image": "https://newstein.in/assets/img/selenium-automation-Testing-in-Bangalore.jpg",
+        "contents": [
+            {
+                "_id": "fwsdfkw234nj23323",
+                "order": 1,
+                "title": "Introduction",
+                "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/VID_20190810_201855.mp4"
+            },
+            {
+                "_id": "fwsdfkw234nj23fr323",
+                "order": 2,
+                "title": "Setup",
+                "subContents": [
+                    {
+                        "_id": "fwsdfkw234rfnj23323",
+                        "order": 1,
+                        "title": "Code Editor Setup",
+                        "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/WhatsApp Video 2019-03-03 at 8.21.57 PM.mp4"
+                    },
+                    {
+                        "_id": "fwsdfffkw234rfnj23323",
+                        "order": 2,
+                        "title": "Env Setup",
+                        "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
+                    }
+                ]
+            },
+            {
+                "_id": "fwsdfkw234nj23fr323",
+                "order": 2,
+                "title": "Angular Fundamentals",
+                "subContents": [
+                    {
+                        "_id": "fwsdfkw234rfnj23323",
+                        "order": 1,
+                        "title": "Angular Cli",
+                        "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/VID_20190810_200130.mp4"
+                    },
+                    {
+                        "_id": "fwsdfffkw234rfnj23323",
+                        "order": 2,
+                        "title": "First Angular Project",
+                        "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
+                    },
+                    {
+                        "_id": "fwsdfffkw234rfnj23323",
+                        "order": 2,
+                        "title": "Angular Project Structure",
+                        "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
+                    }
+                ]
+            }
+        ]
+    },
+    "errors": null
+}

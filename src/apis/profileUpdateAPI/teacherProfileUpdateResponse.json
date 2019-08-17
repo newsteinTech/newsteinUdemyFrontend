@@ -1,0 +1,17 @@
+{
+    "isValid": true,
+    "data": {
+        "_id": "fwsdfffkw234rfnj23323",
+        "user": {
+            "_id": "fwsdfkw234nj233",
+            "name": "Gaurav Singh",
+            "picture": "https://newstein.in/assets/img/gaurav.jpg",
+            "role": "teacher",
+            "mobile": "8297236375",
+            "email": "gaurav9939@gmail.com",
+            "profileStatus": true
+        },
+        "about": "Gaurav Singh is a tech innovator, an IIT-ian who has worked on a variety of technologies and App development. He started his career in IT industry with Microsoft. He has work experience with some of the tech gaints company like Mircosoft and Amazon. Also worked in few Indian startups."
+    },
+    "errors": null
+}
