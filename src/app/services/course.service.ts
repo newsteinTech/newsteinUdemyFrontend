@@ -14,10 +14,10 @@ export class CourseService {
   }
 
   public getCourses(): Observable<ApiResponseModel<CourseModel[]>> {
-    return this.httpClient.get<ApiResponseModel<CourseModel[]>>('apis/courseList.json');
+    return this.httpClient.get<ApiResponseModel<CourseModel[]>>('apis/courseAPI/courseListResponse.json');
   }
 
   public getCourseById(_id: string): Observable<ApiResponseModel<CourseModel>> {
-    return this.httpClient.get<ApiResponseModel<CourseModel>>('apis/courseDetail.json');
+    return this.httpClient.get<ApiResponseModel<CourseModel>>('apis/courseAPI/courseDetailResponse.json');
   }
 }

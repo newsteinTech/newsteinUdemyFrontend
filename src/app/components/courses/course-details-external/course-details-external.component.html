@@ -8,24 +8,46 @@
     <div class="col-8">
       <!--Course Details-->
       <div *ngIf="!currentContent">
-        <h1>{{model.title}}</h1>
-        <h6>by {{model.teacher.user.name}}</h6>
+        <div class="shadow-sm p-3 my-2 bg-white rounded">
+          <div class="row">
+            <div class="col">
+              <img src="{{model.image}}">
+            </div>
+            <div class="col">
+              <h1>{{model.title}}</h1>
+              <h6>by {{model.teacher.user.name}}</h6>
+              <br>
+              <h5>₹ {{model.fee}}</h5>
+              <h6>Rating: {{model.rating}}/5</h6>
+            </div>
+          </div>
 
-        <p class="text-justify mt-4 pt-4">{{model.description}}</p>
+          <p class="text-justify mt-4 pt-4">{{model.description}}</p>
 
-        <button class="btn btn-success mt-4 px-4"
-          (click)="changeVideo(model.contents[0].subContents? model.contents[0].subContents[0]: model.contents[0])">Start
-          Course</button>
+          <button class="btn btn-success mt-4 px-4"
+            (click)="changeVideo(model.contents[0].subContents? model.contents[0].subContents[0]: model.contents[0])">Start
+            Course</button>
+        </div>
+
+        <div class="media shadow-sm p-2 my-5 bg-white rounded">
+          <img src="{{model.teacher.user.profilePic}}" class="align-self-center mr-3 rounded-circle" width="136px"
+            height="136px" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0">{{model.teacher.user.name}}</h5>
+            <p>{{model.teacher.about}}</p>
+            <!-- <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> -->
+          </div>
+        </div>
       </div>
 
       <!--Video Section-->
       <div *ngIf="currentContent">
         <div class="p-3 mb-2 bg-dark text-white shadow-lg p-3 rounded">
-            <button class="btn-secondary float-right" (click)="changeVideo(null)">back</button>
-            <h3 >{{currentContent.title}}</h3>
+          <button class="btn-secondary float-right" (click)="changeVideo(null)">back</button>
+          <h3>{{currentContent.title}}</h3>
         </div>
 
-        <video style="width: 100%" height="380px"  src="{{currentContent.video}}" controls>
+        <video style="width: 100%" height="380px" src="{{currentContent.video}}" controls>
         </video>
 
       </div>
@@ -33,8 +55,13 @@
 
     <!--Content Section-->
     <div class="col-4">
-      <div class="accordion" id="accordionExample">
-        <div class="card" *ngFor="let content of model.contents; let idx = index;">
+      <div class="shadow-sm p-3 mb-3 bg-white rounded" *ngIf="!currentContent">
+        <h4>Course Preview</h4>
+        <video style="width: 100%" height="180px" src="{{model.video}}" controls>
+          </video>
+      </div>
+      <div class="accordion shadow-sm p-3 mb-5 bg-white rounded" id="accordionExample">
+        <div class="" *ngFor="let content of model.contents; let idx = index;">
 
           <!--Card Header-->
           <div class="card-header" id=heading{{idx}}>
@@ -55,7 +82,7 @@
               <div (click)="changeVideo(content)" *ngIf="!content.subContents">
                 <ul class="list-group">
                   <li
-                    class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
+                    class="p-2 border border-top-0 border-left-0 border-right-0 border-dark d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
                     <div (click)="changeVideo(content)">{{content.title}} </div>
                     <span class="badge badge-primary badge-pill">1:38</span>
                   </li>
@@ -65,7 +92,7 @@
               <!--If SubContent Present-->
               <ul class="list-group" *ngFor="let subContent of content.subContents">
                 <li
-                  class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
+                  class="p-2 border border-top-0 border-left-0 border-right-0 border-dark d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
                   <div (click)="changeVideo(subContent)">{{subContent.title}} </div>
                   <span class="badge badge-primary badge-pill">3:12</span>
                 </li>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterModel } from 'src/app/models/user/register-model';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  public model : RegisterModel;
+  constructor() { 
+    this.model = new RegisterModel();
+  }
 
   ngOnInit() {
   }

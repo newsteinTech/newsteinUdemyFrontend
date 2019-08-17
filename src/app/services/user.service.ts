@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginModel } from '../models/user/login-model';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { SignupModel } from '../models/user/signup-model';
 import { LoginResponse } from '../models/user/loginResponse';
+import { RegisterModel } from '../models/user/register-model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class UserService {
     return this.httpClient.post<any>(url, model, { headers: this.headers })
   }
 
-  public signUp(model: SignupModel): Observable<any> {
+  public signUp(model: RegisterModel): Observable<any> {
     let url: string = environment.host + "signup";
 
     return this.httpClient.post<any>(url, model, { headers: this.headers })
