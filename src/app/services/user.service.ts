@@ -20,13 +20,13 @@ export class UserService {
   }
 
   public login(model: LoginModel): Observable<any> {
-    let url: string = environment.host + "login";
+    let url: string = environment.host + "user/login";
 
     return this.httpClient.post<any>(url, model, { headers: this.headers })
   }
 
   public signUp(model: RegisterModel): Observable<any> {
-    let url: string = environment.host + "signup";
+    let url: string = environment.host + "user/register";
 
     return this.httpClient.post<any>(url, model, { headers: this.headers })
   }

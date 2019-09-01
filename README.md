@@ -61,7 +61,7 @@ Setup:
 
 
 
-MasterPiece: 
+# MasterPiece: 
     html attribute in with Angular.
     Bootstrap to Angular
         https://stackoverflow.com/questions/36051195/give-dynamic-id-angular2-binds
@@ -88,5 +88,50 @@ MasterPiece:
             </li>
             </ul>
 
-Conditional CSS Class
+# My Working example 
+<div class="accordion shadow-sm p-3 mb-5 bg-white rounded" id="accordionExample">
+        <div class="" *ngFor="let content of model.contents; let idx = index;">
+
+          <!--Card Header-->
+          <div class="card-header" id=heading{{idx}}>
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" [attr.data-target]="'#collapse' + idx"
+                aria-expanded="true" aria-controls="collapseOne">
+                {{content.title}}
+              </button>
+            </h2>
+          </div>
+
+          <!--Card Body-->
+          <div id=collapse{{idx}} class="collapse" [ngClass]="{'show': idx==0}" [attr.aria-labelledby]="'heading' + idx"
+            data-parent="#accordionExample">
+            <div class="card-body">
+
+              <!-- If no SubContent-->
+              <div (click)="changeVideo(content)" *ngIf="!content.subContents">
+                <ul class="list-group">
+                  <li
+                    class="p-2 border border-top-0 border-left-0 border-right-0 border-dark d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
+                    <div (click)="changeVideo(content)">{{content.title}} </div>
+                    <span class="badge badge-primary badge-pill">1:38</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!--If SubContent Present-->
+              <ul class="list-group" *ngFor="let subContent of content.subContents">
+                <li
+                  class="p-2 border border-top-0 border-left-0 border-right-0 border-dark d-flex justify-content-between align-items-center list-group-item-action list-group-item-dark cursor">
+                  <div (click)="changeVideo(subContent)">{{subContent.title}} </div>
+                  <span class="badge badge-primary badge-pill">3:12</span>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+# Conditional CSS Class
     [ngClass]="{'show': idx==0}" 
