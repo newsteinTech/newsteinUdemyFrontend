@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginModel } from 'src/app/models/user/login-model';
-import { UserService } from 'src/app/services/user.service';
+import { LoginModel } from '../../../models/user/login-model';
+import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
-import { ToastService } from 'src/app/services/shared/toast.service';
-import { HandledErrorResponse } from 'src/app/models/shared/handled-error-response';
-import { ServiceHelper } from 'src/app/services/service-helper';
-import { NavService } from 'src/app/services/shared/nav.service';
+import { ToastService } from '../../../services/shared/toast.service';
+import { HandledErrorResponse } from '../../../models/shared/handled-error-response';
+import { ServiceHelper } from '../../../services/service-helper';
+import { NavService } from '../../../services/shared/nav.service';
 import { BaseComponent } from '../../base-component';
 
 @Component({

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterModel } from 'src/app/models/user/register-model';
-import { ToastService } from 'src/app/services/shared/toast.service';
-import { UserService } from 'src/app/services/user.service';
+import { RegisterModel } from '../../../models/user/register-model';
+import { ToastService } from '../../../services/shared/toast.service';
+import { UserService } from '../../../services/user.service';
 import { Router } from '@angular/router';
-import { HandledErrorResponse } from 'src/app/models/shared/handled-error-response';
-import { ServiceHelper } from 'src/app/services/service-helper';
+import { HandledErrorResponse } from '../../../models/shared/handled-error-response';
+import { ServiceHelper } from '../../../services/service-helper';
 
 @Component({
   selector: 'app-signup',

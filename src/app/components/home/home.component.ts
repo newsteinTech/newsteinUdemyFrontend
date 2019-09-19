@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseModel } from 'src/app/models/courses/course-model';
-import { CourseService } from 'src/app/services/course.service';
-import { ToastService } from 'src/app/services/shared/toast.service';
+import { CourseModel } from '../../models/courses/course-model';
+import { CourseService } from '../../services/course.service';
+import { ToastService } from '../../services/shared/toast.service';
 import { Router } from '@angular/router';
-import { HandledErrorResponse } from 'src/app/models/shared/handled-error-response';
-import { ServiceHelper } from 'src/app/services/service-helper';
+import { HandledErrorResponse } from '../../models/shared/handled-error-response';
+import { ServiceHelper } from '../../services/service-helper';
 import { BaseComponent } from '../base-component';
 
 @Component({

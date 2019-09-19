@@ -1,10 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ContentModel } from 'src/app/models/courses/contentModel';
-import { HandledErrorResponse } from 'src/app/models/shared/handled-error-response';
-import { BaseComponent } from 'src/app/components/base-component';
-import { ServiceHelper } from 'src/app/services/service-helper';
-import { FileUploadService } from 'src/app/services/shared/file-upload.service';
-import { ToastService } from 'src/app/services/shared/toast.service';
+import { ContentModel } from '../../../../models/courses/contentModel';
+import { HandledErrorResponse } from '../../../../models/shared/handled-error-response';
+import { BaseComponent } from '../../../../components/base-component';
+import { ServiceHelper } from '../../../../services/service-helper';
+import { FileUploadService } from '../../../../services/shared/file-upload.service';
+import { ToastService } from '../../../../services/shared/toast.service';
 import { Router } from '@angular/router';
 
 @Component({

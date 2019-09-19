@@ -32,7 +32,7 @@ import { CourseDetailsExternalComponent } from './components/courses/course-deta
     CourseDetailsExternalComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     FormsModule,

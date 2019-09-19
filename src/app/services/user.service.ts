@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { LoginModel } from '../models/user/login-model';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { LoginResponse } from '../models/user/loginResponse';
 import { RegisterModel } from '../models/user/register-model';
 
