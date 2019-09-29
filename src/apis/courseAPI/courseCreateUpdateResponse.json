@@ -7,7 +7,7 @@
             "user": {
                 "_id": "fwsdfkw234nj233",
                 "name": "Gaurav Singh",
-                "picture": "https://newstein.in/assets/img/gaurav.jpg", 
+                "profilePic": "https://newstein.in/assets/img/gaurav.jpg", 
                 "role": "teacher",
                 "mobile": "8297236375",
                 "email": "gaurav9939@gmail.com"
@@ -22,24 +22,20 @@
         "contents": [
             {
                 "_id": "fwsdfkw234nj23323",
-                "order": 1,
                 "title": "Introduction",
                 "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/VID_20190810_201855.mp4"
             },
             {
                 "_id": "fwsdfkw234nj23fr323",
-                "order": 2,
                 "title": "Setup",
                 "subContents": [
                     {
                         "_id": "fwsdfkw234rfnj23323",
-                        "order": 1,
                         "title": "Code Editor Setup",
                         "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/WhatsApp Video 2019-03-03 at 8.21.57 PM.mp4"
                     },
                     {
                         "_id": "fwsdfffkw234rfnj23323",
-                        "order": 2,
                         "title": "Env Setup",
                         "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
                     }
@@ -47,24 +43,20 @@
             },
             {
                 "_id": "fwsdfkw234nj23fr323",
-                "order": 2,
                 "title": "Angular Fundamentals",
                 "subContents": [
                     {
                         "_id": "fwsdfkw234rfnj23323",
-                        "order": 1,
                         "title": "Angular Cli",
                         "video": "https://udemy-project.s3.ap-south-1.amazonaws.com/VID_20190810_200130.mp4"
                     },
                     {
                         "_id": "fwsdfffkw234rfnj23323",
-                        "order": 2,
                         "title": "First Angular Project",
                         "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
                     },
                     {
                         "_id": "fwsdfffkw234rfnj23323",
-                        "order": 2,
                         "title": "Angular Project Structure",
                         "video": "https://www.youtube.com/embed/Nk-vGiD21M8"
                     }

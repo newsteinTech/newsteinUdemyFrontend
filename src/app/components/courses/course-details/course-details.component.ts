@@ -75,7 +75,6 @@ export class CourseDetailsComponent extends BaseComponent implements OnInit {
 
   private uploadFile(file: File, isVideo: boolean): void {
     this.loading = true;
-
     this.fileUploadService.uploadFile(file).subscribe(
       response => {
         this.loading = false;

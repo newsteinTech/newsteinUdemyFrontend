@@ -4,5 +4,4 @@ export class RegisterModel {
     public email: string;
     public password: string;
     public isTeacher: boolean
-    public role: string;
 }

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { LoginResponse } from '../models/user/loginResponse';
 import { RegisterModel } from '../models/user/register-model';
+import { UserModel } from '../models/user/user-model';
 
 @Injectable({
   providedIn: 'root'
@@ -40,21 +41,19 @@ export class UserService {
     localStorage.setItem(UserService.userKey, JSON.stringify(model));
   }
 
-  public static getUserData(): LoginResponse {
-    let strData = localStorage.getItem(UserService.userKey);
-
-    if (strData) {
-      let user: LoginResponse = JSON.parse(strData);
-      return user;
+  public static getToken(): string {
+    let userProfile: LoginResponse = UserService.getUserData();
+    if (userProfile) {
+      return userProfile.token;
     }
 
     return null;
   }
 
-  public static getToken(): string {
-    let userProfile: LoginResponse = UserService.getUserData();
-    if (userProfile) {
-      return userProfile.token;
+  public static getUser(): UserModel {
+    let loginResponse: LoginResponse = UserService.getUserData();
+    if (loginResponse) {
+      return loginResponse.user;
     }
 
     return null;
@@ -70,5 +69,16 @@ export class UserService {
 
   public static logout(): void {
     localStorage.removeItem(UserService.userKey);
+  }
+
+  private static getUserData(): LoginResponse {
+    let strData = localStorage.getItem(UserService.userKey);
+
+    if (strData) {
+      let loginResponse: LoginResponse = JSON.parse(strData);
+      return loginResponse;
+    }
+    
+    return null;
   }
 }

@@ -1,14 +1,13 @@
 {
     "isValid": true,
     "data": {
-        "token": "some toekn",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDhkMTZhM2I4YjA4NGFkNzgxODI0NzUiLCJuYW1lIjoiR2F1cmF2IFNpbmdoIiwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE1Njk1MjgyNTUsImV4cCI6MTU3MDYwODI1NX0.CMwrenqCNaUxi2E6BeI6L-FVWwLrhJBqGrj3WyPg2eo",
         "user": {
-            "_id": "fwsdfkw234nj233",
             "name": "Gaurav Singh",
-            "role": "teacher",
-            "mobile": "8297236375",
-            "email": "gaurav9939@gmail.com",
-            "profileStatus": false
+            "email": "gaurav@gmail.com",
+            "mobile": 8297236375,
+            "profilePic": "https://newstein.in/assets/img/gaurav.jpg",
+            "isProfileComplete": true
         }
     },
     "errors": null

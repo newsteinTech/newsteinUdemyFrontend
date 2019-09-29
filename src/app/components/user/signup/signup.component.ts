@@ -24,9 +24,6 @@ export class SignupComponent implements OnInit {
 
   public register(): void {
     this.loading = true;
-    if (this.model.isTeacher) {
-      this.model.role = "teacher";
-    }
 
     this.userService.signUp(this.model).subscribe(
       response => {

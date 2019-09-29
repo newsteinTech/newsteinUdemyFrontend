@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     if (UserService.isLoggedIn()) {
-      this.navService.hideLogin(UserService.getUserData().user.name);
+      this.navService.hideLogin(UserService.getUser().name);
     }
   }
 

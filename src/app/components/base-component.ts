@@ -21,4 +21,10 @@ export abstract class BaseComponent {
             this.baseRouter.navigate(['/login']);
         }
     }
+    
+//     protected signout() : void{
+//         this.navService.showLogin();
+//         UserService.logout();
+//         this.baseRouter.navigate(['/login']);
+//   }
 }
