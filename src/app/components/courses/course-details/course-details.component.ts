@@ -15,6 +15,7 @@ import { FileUploadService } from '../../../services/shared/file-upload.service'
   styleUrls: ['./course-details.component.css']
 })
 export class CourseDetailsComponent extends BaseComponent implements OnInit {
+  private id: string;
   public model: CourseModel;
 
   public constructor(
@@ -27,15 +28,39 @@ export class CourseDetailsComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('id');
+    this.id = this.route.snapshot.paramMap.get('id');
 
-    if (id == "-1") {
+    if (this.id == "-1") {
       this.model = new CourseModel();
     } else {
-      this.loadCourse(id);
+      this.loadCourse(this.id);
     }
   }
   
+  public createOrUpdate(): void {
+    this.loading = true;
+
+    this.courseService.createOrUpdateCourse(this.model).subscribe(
+      response => {
+        this.loading = false;
+        if (response.isValid) {
+          this.model = response.data;
+
+          if (!this.id){
+            this.id = this.model._id;
+          }
+        } else {
+          this.toastService.error(response.errors[0]);
+        }
+      },
+      error => {
+        this.loading = false;
+          let handledError: HandledErrorResponse = ServiceHelper.handleErrorResponse({ ...error });
+          this.checkUnauthorized(handledError);
+      }
+    )
+  }
+
   public addNewContent(): void {
     if (this.model.contents == null) {
       this.model.contents = [];
